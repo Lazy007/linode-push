@@ -1,0 +1,12 @@
+For changing color of hostname --
+
+nano ~/.bashrc
+
+
+For changing name of host --
+
+sudo nano /etc/hostname
+
+sudo nano /etc/hosts
+
+sudo reboot
