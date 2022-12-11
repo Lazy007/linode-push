@@ -1,8 +1,9 @@
 var Wallet = require('ethereumjs-wallet');
+var randomBytes = require('randombytes');
 var fs = require('fs');
 var EthUtil = require('ethereumjs-util');
 var scanCount = 0;
-const addrRequest = '0xbed96d0840201011df1467379a5d311e0040073a';
+const addrRequest = ;
 
 const getRandomWallet = () => {
     const randbytes = randomBytes(32).toString('hex');
@@ -16,7 +17,7 @@ function genEth(addrReq){
     const priv = hexxer.privKey;
     const privateKeyString = '0x' + priv;
     const privateKeyBuffer = EthUtil.toBuffer(privateKeyString);
-    let wallet = Wallet.fromPrivateKey(privateKeyBuffer);
+    let wallet = Wallet.default.fromPrivateKey(privateKeyBuffer);
     var addr = wallet.getAddressString();
     var addrPriv = 'address: ' + addr + ' priv key: ' + priv;
     scanCount ++;
