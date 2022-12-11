@@ -7,8 +7,7 @@ const addrRequest = '0xbed96d0840201011df1467379a5d311e0040073a';
 const getRandomWallet = () => {
     const randbytes = randomBytes(32).toString('hex');
     return {
-        privKey: randbytes,
-        address: new ethers.Wallet(randbytes)
+        privKey: randbytes
     };
 };
 
